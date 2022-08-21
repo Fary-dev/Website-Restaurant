@@ -2,12 +2,25 @@ import React from "react";
 import styled from "styled-components";
 
 const CustomNavbar = styled.div`
-  background: #d5a;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0 auto;
+  padding: 10px 15px;
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  border-radius: 5px;
+  color: ${({ theme }) => theme.text.wightColor};
   max-width: ${({ theme }) => theme.screenSize.maxWidth};
+  @media (width < 1100px) {
+    flex-direction: column;
+  }
+  @media (width < 768px) {
+    flex-direction: row;
+    padding: 3% 15%;
+    background: #000;
+    border-radius: 0;
+  }
 `;
 const Info = styled.div`
   margin: 0 auto;
@@ -21,6 +34,9 @@ const Info = styled.div`
   @media (width < 960px) {
     flex-direction: column;
   }
+  @media (width < 768px) {
+    background: #000;
+  }
 `;
 const Row = styled.div`
   display: flex;
@@ -29,6 +45,52 @@ const Row = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 0 25px;
+  span {
+    color: ${({ theme }) => theme.primaryColor};
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Marck Script";
+    i {
+      padding: 0 0 0 15px;
+    }
+  }
+`;
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 25px;
+  ul {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    padding: 0;
+    gap: 0 20px;
+  }
+  a {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.7rem;
+    color: ${({ theme }) => theme.text.detailsColor};
+    transition: ease 0.3s color;
+    &:hover {
+      color: ${({ theme }) => theme.text.wightColor};
+    }
+  }
+  i {
+    font-size: 0.8rem;
+  }
+  @media (width < 768px) {
+    display: none;
+  }
 `;
 const InfoItem = styled.div`
   display: flex;
@@ -65,9 +127,26 @@ const SocialMedia = styled.div`
     }
   }
 `;
+const Container = styled.div`
+  margin: 0 3%;
+  @media (width < 768px) {
+    margin: 0;
+  }
+`;
+const BurgerIcon = styled.div`
+  display: none;
+  padding: 0;
+  margin: 0;
+  i {
+    font-size: 2rem;
+  }
+  @media (width < 768px) {
+    display: block;
+  }
+`;
 function Navbar() {
   return (
-    <>
+    <Container>
       <Info>
         <Row>
           <InfoItem>
@@ -106,8 +185,42 @@ function Navbar() {
           </InfoItem>
         </Row>
       </Info>
-      <CustomNavbar></CustomNavbar>
-    </>
+      <CustomNavbar>
+        <Row>
+          <span>
+            Foodo<i class="fa-solid fa-wheat-awn"></i>
+          </span>
+        </Row>
+        <BurgerIcon>
+          <i class="fa-solid fa-bars"></i>
+        </BurgerIcon>
+        <Nav>
+          <ul>
+            <li>
+              <a href="#a">home</a>
+            </li>
+            <li>
+              <a href="#a">menu</a>
+            </li>
+            <li>
+              <a href="#a">chefs</a>
+            </li>
+            <li>
+              <a href="#a">reservation</a>
+            </li>
+            <li>
+              <a href="#a">pages</a>
+            </li>
+            <li>
+              <a href="#a">blog</a>
+            </li>
+          </ul>
+          <a href="#a">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </Nav>
+      </CustomNavbar>
+    </Container>
   );
 }
 
