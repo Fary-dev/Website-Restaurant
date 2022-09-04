@@ -6,7 +6,7 @@ import HeaderItems from "./Header/HeaderItems";
 import ChefRecommends from "./ChefRecommends/ChefRecommends";
 import Ingredients from "./Ingredients/Ingredients";
 import GeneralInformation from "./GeneralInformation/GeneralInformation";
-import RecentArticles from "./RecentArticles/RecentArticles";
+
 import Video from "./Video/Video";
 import Testimonial from "./Testimonial/Testimonial";
 import Contact from "../Contact/Contact";
@@ -39,7 +39,7 @@ const Item = styled.div`
   height: auto;
   width: 100%;
   z-index: 1;
-  gap: 90px;
+  gap: 70px;
   @media (width> 800px) {
     top: 750px;
   }
@@ -124,7 +124,6 @@ function Home() {
         <ChefRecommends />
         <Ingredients />
         <GeneralInformation />
-        <RecentArticles />
         <Video />
         <Testimonial />
         <Contact />

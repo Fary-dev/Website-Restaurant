@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import Slider from "./Slider";
 
 const Banner = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 650px;
   width: 100%;
@@ -9,7 +13,7 @@ const Banner = styled.div`
   &::before {
     backdrop-filter: blur(2px);
     content: "";
-    position: Absolute;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -21,12 +25,15 @@ const Container = styled.div`
   position: Absolute;
   height: 100%;
   width: 100%;
+  gap: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
   line-height: 0.7rem;
+
+  padding: 0 3%;
   h1 {
     display: inline-block;
     position: relative;
@@ -57,77 +64,12 @@ const Container = styled.div`
     padding-bottom: 40px;
   }
 `;
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`;
-const Item = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  margin: 0 3%;
-  img {
-    max-width: 100%;
-    border-radius: 5px;
-  }
-`;
-const InfoProduct = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
-  width: 100%;
-  margin: 20px 0;
-`;
-const ColumnLink = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  line-height: 0.7rem;
-  h6 {
-    margin: 10px 0 0 10px;
-    font-size: 1rem;
-    letter-spacing: 1px;
-  }
-  p {
-    margin: 10px 0 0 10px;
-    font-size: 0.8rem;
-  }
-  i {
-    padding: 0;
-    margin: 10px 2px;
-    font-size: 0.6rem;
-    color: ${({ theme }) => theme.primaryColor};
-  }
-`;
-const Rate = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  width: 100%;
-  margin-left: 10px;
-`;
-const ColumnRight = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: end;
-  margin: 0 10px 0 0;
-  line-height: 0;
-  p {
-    margin: 20px 10px;
-    font-size: 2rem;
-    color: ${({ theme }) => theme.primaryColor};
-    font-family: "Marck Script";
-  }
-`;
+// const NavigationArrow = {
+//   display: "flex",
+//   gap: "50px",
+//   padding: "0",
+//   margin: "0",
+// };
 
 function ChefRecommends() {
   const SlidesList = [
@@ -192,30 +134,11 @@ function ChefRecommends() {
     <Banner>
       <Container>
         <h1>Chef Recommends</h1>
-        <h2>{"<    >"}</h2>
-        <Row>
-          {SlidesList.map((item, key) => (
-            <Item key={key}>
-              <img src={item.photo} alt={`img-${key}`} />
-              <InfoProduct>
-                <ColumnLink>
-                  <h6>{item.title}</h6>
-                  <p>{item.details}</p>
-                  <Rate>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                  </Rate>
-                </ColumnLink>
-                <ColumnRight>
-                  <p>{`$${item.price}`}</p>
-                </ColumnRight>
-              </InfoProduct>
-            </Item>
-          ))}
-        </Row>
+        {/* <div style={NavigationArrow}>
+          <h2>⮘</h2>
+          <h2>⮚</h2>
+        </div> */}
+        <Slider slides={SlidesList} />
       </Container>
     </Banner>
   );

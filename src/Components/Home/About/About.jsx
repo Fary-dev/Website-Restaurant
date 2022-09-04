@@ -4,8 +4,8 @@ import styled from "styled-components";
 const Container = styled.section`
   display: flex;
   flex-direction: column;
+
   margin: 0 3%;
-  // margin-top: 90px;
   max-width: ${({ theme }) => theme.screenSize.maxWidth};
   gap: 10px;
   @media (width > 767px) {
@@ -71,7 +71,7 @@ const Right = styled.div`
   width: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: start;
   gap: 20px;
 
@@ -92,12 +92,13 @@ const Right = styled.div`
 `;
 const Button = styled.a`
   display: block;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   text-decoration: none;
   background-color: transparent;
-  padding: 10px 25px;
+  padding: 15px 25px;
   border: 2px solid ${({ theme }) => theme.primaryColor};
   border-radius: 5px;
   margin-top: 25px;
@@ -110,15 +111,14 @@ function About() {
   return (
     <Container id={"about"}>
       <Left>
-        <h1>Little About Us</h1>
-        <h2>THE HISTORY OF US</h2>
+        <h1> Little About Us </h1> <h2> THE HISTORY OF US </h2>{" "}
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing Dolores. Ad Lorem
-          ipsum dolor, sit amet consectetur adipisicing elis. Quisquam, iure.
-          Ducimus alias velit labours Mobis, Dolores qui eagre ad Magna.
-        </p>
-        <Button>read more</Button>
-      </Left>
+          Lorem, ipsum dolor sit amet consectetur adipisicing Dolores.Ad Lorem
+          ipsum dolor, sit amet consectetur adipisicing elis.Quisquam,
+          iure.Ducimus alias velit labours Mobis.{" "}
+        </p>{" "}
+        <Button> read more </Button>{" "}
+      </Left>{" "}
       <Right>
         <img
           src="https://max-themes.net/demos/recibo/upload/food-circle-6.png"
