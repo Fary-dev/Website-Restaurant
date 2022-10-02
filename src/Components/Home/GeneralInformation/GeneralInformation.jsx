@@ -9,7 +9,6 @@ const Banner = {
   backgroundColor: "#ffd44c",
   justifyContent: "center",
   alignItems: "center",
-  // padding: "0 3%",
 };
 const Container = styled.div`
   max-width: ${({ theme }) => theme.screenSize.maxWidth};
@@ -56,7 +55,7 @@ const Row = styled.div`
   }
 `;
 
-function GeneralInformation() {
+export default function GeneralInformation() {
   return (
     <div style={Banner}>
       <Container>
@@ -76,5 +75,3 @@ function GeneralInformation() {
     </div>
   );
 }
-
-export default GeneralInformation;

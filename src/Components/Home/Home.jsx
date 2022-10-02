@@ -8,9 +8,8 @@ import Ingredients from "./Ingredients/Ingredients";
 import GeneralInformation from "./GeneralInformation/GeneralInformation";
 
 import Video from "./Video/Video";
-import Testimonial from "./Testimonial/Testimonial";
 import Contact from "../Contact/Contact";
-import CopyRight from "../CopyRight/CopyRight";
+import Gallery from "./Gallery/Gallery";
 
 const BgHeader = styled.header`
   position: relative;
@@ -125,9 +124,8 @@ function Home() {
         <Ingredients />
         <GeneralInformation />
         <Video />
-        <Testimonial />
+        <Gallery />
         <Contact />
-        <CopyRight />
       </Item>
     </section>
   );
