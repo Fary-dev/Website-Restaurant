@@ -99,6 +99,7 @@ const Button = styled.a`
   text-decoration: none;
   background-color: transparent;
   padding: 15px 25px;
+  cursor: pointer;
   border: 2px solid ${({ theme }) => theme.primaryColor};
   border-radius: 5px;
   margin-top: 25px;

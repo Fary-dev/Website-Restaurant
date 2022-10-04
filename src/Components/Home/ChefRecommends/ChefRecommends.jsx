@@ -32,7 +32,6 @@ const Container = styled.div`
   align-items: center;
   color: #fff;
   line-height: 0.7rem;
-
   padding: 0 3%;
   h1 {
     display: inline-block;
@@ -58,18 +57,7 @@ const Container = styled.div`
       }
     }
   }
-  h2 {
-    font-size: 2rem;
-    color: ${({ theme }) => theme.primaryColor};
-    padding-bottom: 40px;
-  }
 `;
-// const NavigationArrow = {
-//   display: "flex",
-//   gap: "50px",
-//   padding: "0",
-//   margin: "0",
-// };
 
 function ChefRecommends() {
   const SlidesList = [
@@ -134,10 +122,6 @@ function ChefRecommends() {
     <Banner>
       <Container>
         <h1>Chef Recommends</h1>
-        {/* <div style={NavigationArrow}>
-          <h2>⮘</h2>
-          <h2>⮚</h2>
-        </div> */}
         <Slider slides={SlidesList} />
       </Container>
     </Banner>

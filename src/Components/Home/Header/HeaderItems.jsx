@@ -18,7 +18,12 @@ const Grid = styled.div`
 const Item = styled.div`
   display: flex;
   flex-direction: column;
-  background: var(--paddingBG);
+  background: ${(props) =>
+    props.color === "0"
+      ? "rgb(255,212,76)"
+      : props.color === "1"
+      ? "rgb(233,192,81)"
+      : "rgb(214,179,83)"};
   justify-content: start;
   align-items: start;
   max-width: 400px;
@@ -69,20 +74,10 @@ function HeaderItems() {
   return (
     <Grid>
       {ItemList.map((item, key) => (
-        <Item
-          style={{
-            "--paddingBG": `${
-              key === 0
-                ? "rgb(255,212,76)"
-                : key === 1
-                ? "rgb(233,192,81)"
-                : "rgb(214,179,83)"
-            }`,
-          }}
-        >
+        <Item defaultChecked key={key} color={key.toString()}>
           <h2>
             <i
-              class={
+              className={
                 key === 0
                   ? "fa-solid fa-martini-glass-citrus"
                   : key === 1

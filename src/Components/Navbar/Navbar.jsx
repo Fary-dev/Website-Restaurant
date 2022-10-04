@@ -109,6 +109,17 @@ const InfoItem = styled.div`
     font-size: 0.8rem;
     margin: 0;
   }
+  p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: ${({ theme }) => theme.text.wightColor};
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin: 0;
+  }
   i {
     color: ${({ theme }) => theme.text.wightColor};
     font-size: 0.6rem;
@@ -151,35 +162,35 @@ function Navbar() {
         <Row>
           <InfoItem>
             <h6>
-              <i class="fa-solid fa-phone"></i>+43-111-222-3333
+              <i className="fa-solid fa-phone"></i>+43-111-222-3333
             </h6>
           </InfoItem>
           <InfoItem>
             <h6>
-              <i class="fa-solid fa-envelope"></i>justforexample@gmail.com
+              <i className="fa-solid fa-envelope"></i>justforexample@gmail.com
             </h6>
           </InfoItem>
         </Row>
         <Row>
           <InfoItem>
             <h6>
-              <i class="fa-solid fa-clock"></i>Mo - Fr / 10:00 - 21:00,
-              <h6>Sa - So / 09:00 - 23:00</h6>
+              <i className="fa-solid fa-clock"></i>Mo - Fr / 10:00 - 21:00,
+              <p>Sa - So / 09:00 - 23:00</p>
             </h6>
           </InfoItem>
           <InfoItem>
             <SocialMedia>
-              <a href="#a">
-                <i class="fa-brands fa-facebook-f"></i>
+              <a href="facebook">
+                <i className="fa-brands fa-square-facebook"></i>
               </a>
-              <a href="#a">
-                <i class="fa-brands fa-instagram"></i>
+              <a href="instagram">
+                <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="#a">
-                <i class="fa-brands fa-pinterest-p"></i>
+              <a href="pinterest">
+                <i className="fa-brands fa-pinterest-p"></i>
               </a>
-              <a href="#a">
-                <i class="fa-brands fa-twitter"></i>
+              <a href="twitter">
+                <i className="fa-brands fa-twitter"></i>
               </a>
             </SocialMedia>
           </InfoItem>
@@ -188,11 +199,11 @@ function Navbar() {
       <CustomNavbar>
         <Row>
           <span>
-            Foodo<i class="fa-solid fa-wheat-awn"></i>
+            Foodo<i className="fa-solid fa-wheat-awn"></i>
           </span>
         </Row>
         <BurgerIcon>
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         </BurgerIcon>
         <Nav>
           <ul>
@@ -216,7 +227,7 @@ function Navbar() {
             </li>
           </ul>
           <a href="#a">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
           </a>
         </Nav>
       </CustomNavbar>
