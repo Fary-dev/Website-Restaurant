@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 
 const Banner = styled.div`
   display: flex;
@@ -109,20 +109,32 @@ const Column = styled.div`
     font-size: 0.8rem;
   }
 `;
+<<<<<<< HEAD
 const RowItem = {
+=======
+const RowItem: CSSProperties = {
+>>>>>>> 771a909fb63e0534edb073863e49beb0d81e4d3d
   display: "flex",
   flexDirection: "row",
   alignItems: "flex-start",
   justifyContent: "start",
 };
+<<<<<<< HEAD
 const RowItemWithSpaceBetween = {
+=======
+const RowItemWithSpaceBetween: CSSProperties = {
+>>>>>>> 771a909fb63e0534edb073863e49beb0d81e4d3d
   display: "flex",
   flexDirection: "row",
   alignItems: "flex-start",
   justifyContent: "space-between",
   width: "100%",
 };
+<<<<<<< HEAD
 const ColumnItem = {
+=======
+const ColumnItem: CSSProperties = {
+>>>>>>> 771a909fb63e0534edb073863e49beb0d81e4d3d
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
