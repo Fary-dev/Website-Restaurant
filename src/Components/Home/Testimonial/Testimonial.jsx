@@ -66,7 +66,7 @@ function Testimonial() {
           arum nisi consequently option.
         </p>
         <p>
-          Susan Smith, <span>Journalist</span>
+          Alexander Müller, <span>Journalist</span>
         </p>
       </Container>
     </Body>

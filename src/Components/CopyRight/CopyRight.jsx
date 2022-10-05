@@ -15,14 +15,15 @@ const Container = styled.footer`
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-
   p {
+    color: ${({ theme }) => theme.text.underTitleColor};
     font-size: clamp(0.5rem, 3vw, 0.8rem);
+    letter-spacing: 1px;
   }
   i {
     font-size: 0.8rem;
   }
-  @media (width < 500px) {
+  @media (width < 768px) {
     justify-content: space-between;
     flex-direction: column;
   }
@@ -32,6 +33,13 @@ const SocialIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  i {
+    color: ${({ theme }) => theme.text.underTitleColor};
+    &:hover {
+      color: ${({ theme }) => theme.text.detailsColor};
+      cursor: pointer;
+    }
+  }
 `;
 function CopyRight() {
   return (
